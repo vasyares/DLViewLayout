@@ -21,6 +21,8 @@
 		1DC47EA91794630600530E85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC47E8A1794630600530E85 /* Foundation.framework */; };
 		1DC47EB11794630600530E85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DC47EAF1794630600530E85 /* InfoPlist.strings */; };
 		1DC47EB41794630600530E85 /* UIViewLayoutExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC47EB31794630600530E85 /* UIViewLayoutExampleTests.m */; };
+		1DC47EBF1794633600530E85 /* UIView+DLViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC47EBE1794633600530E85 /* UIView+DLViewLayout.m */; };
+		1DC47EC017946E3500530E85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC47E8C1794630600530E85 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		1DC47EB01794630600530E85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1DC47EB21794630600530E85 /* UIViewLayoutExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewLayoutExampleTests.h; sourceTree = "<group>"; };
 		1DC47EB31794630600530E85 /* UIViewLayoutExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewLayoutExampleTests.m; sourceTree = "<group>"; };
+		1DC47EBD1794633600530E85 /* UIView+DLViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+DLViewLayout.h"; path = "Classes/UIView+DLViewLayout.h"; sourceTree = "<group>"; };
+		1DC47EBE1794633600530E85 /* UIView+DLViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+DLViewLayout.m"; path = "Classes/UIView+DLViewLayout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC47EC017946E3500530E85 /* CoreGraphics.framework in Frameworks */,
 				1DC47EA71794630600530E85 /* SenTestingKit.framework in Frameworks */,
 				1DC47EA81794630600530E85 /* UIKit.framework in Frameworks */,
 				1DC47EA91794630600530E85 /* Foundation.framework in Frameworks */,
@@ -82,6 +87,8 @@
 		1DC47E7C1794630600530E85 = {
 			isa = PBXGroup;
 			children = (
+				1DC47EBD1794633600530E85 /* UIView+DLViewLayout.h */,
+				1DC47EBE1794633600530E85 /* UIView+DLViewLayout.m */,
 				1DC47E8E1794630600530E85 /* UIViewLayoutExample */,
 				1DC47EAC1794630600530E85 /* UIViewLayoutExampleTests */,
 				1DC47E871794630600530E85 /* Frameworks */,
@@ -264,6 +271,7 @@
 			files = (
 				1DC47E951794630600530E85 /* main.m in Sources */,
 				1DC47E991794630600530E85 /* DLAppDelegate.m in Sources */,
+				1DC47EBF1794633600530E85 /* UIView+DLViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
