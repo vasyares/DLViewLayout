@@ -23,8 +23,13 @@
 - (CGSize)size;
 - (instancetype)setSize:(CGSize)size;
 
+- (instancetype)adjustOrigin:(CGPoint)origin;
+- (instancetype)adjustX:(CGFloat)x;
+- (instancetype)adjustY:(CGFloat)x;
 
 - (instancetype)centerInSuperview;
+- (instancetype)centerHorizontalInSuperview;
+- (instancetype)centerVerticalInSuperview;
 
 - (instancetype)setRightOffset:(CGFloat)offset;
 

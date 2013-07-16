@@ -110,6 +110,55 @@
 	return self;
 }
 
+- (instancetype)centerHorizontalInSuperview {
+	if (self.superview) {
+		self.center = CGPointMake(self.superview.center.x, self.center.y);
+	} else {
+		[self addDeferredInvocationWithSelector:_cmd];
+	}
+	return self;
+}
+
+- (instancetype)centerVerticalInSuperview {
+	if (self.superview) {
+		self.center = CGPointMake(self.center.x, self.superview.center.y);
+	} else {
+		[self addDeferredInvocationWithSelector:_cmd];
+	}
+	return self;
+}
+
+- (instancetype)adjustOrigin:(CGPoint)origin {
+	if (self.superview) {
+		self.X += origin.x;
+		self.Y += origin.y;
+	} else {
+		NSInvocation *invocation = [self addDeferredInvocationWithSelector:_cmd];
+		[invocation setArgument:&origin atIndex:2];
+	}
+	return self;
+}
+
+- (instancetype)adjustX:(CGFloat)x {
+	if (self.superview) {
+		self.X += x;
+	} else {
+		NSInvocation *invocation = [self addDeferredInvocationWithSelector:_cmd];
+		[invocation setArgument:&x atIndex:2];
+	}
+	return self;
+}
+
+- (instancetype)adjustY:(CGFloat)y {
+	if (self.superview) {		
+		self.Y += y;
+	} else {
+		NSInvocation *invocation = [self addDeferredInvocationWithSelector:_cmd];
+		[invocation setArgument:&y atIndex:2];
+	}
+	return self;
+}
+
 #pragma mark - Private
 
 - (NSInvocation *)addDeferredInvocationWithSelector:(SEL)selector {
