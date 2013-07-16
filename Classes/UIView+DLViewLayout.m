@@ -91,6 +91,14 @@
 	return self;
 }
 
+- (CGFloat)maxX {
+	return CGRectGetMaxX(self.frame);
+}
+
+- (CGFloat)maxY {
+	return CGRectGetMaxY(self.frame);
+}
+
 - (instancetype)setRightOffset:(CGFloat)offset {
 	if (self.superview) {
 		self.X = self.superview.width - self.width - offset;
@@ -189,7 +197,8 @@
 + (void)vl_swizzle {
 	SEL didMoveToSuperview = @selector(didMoveToSuperview);
 	SEL vldidMoveToSuperview = @selector(vl_didMoveToSuperview);
-	method_exchangeImplementations(class_getInstanceMethod(self, didMoveToSuperview), class_getInstanceMethod(self, vldidMoveToSuperview));
+	method_exchangeImplementations(class_getInstanceMethod(self, didMoveToSuperview),
+								   class_getInstanceMethod(self, vldidMoveToSuperview));
 }
 
 + (void)load {

@@ -22,6 +22,8 @@
 - (instancetype)setOrigin:(CGPoint)origin;
 - (CGSize)size;
 - (instancetype)setSize:(CGSize)size;
+- (CGFloat)maxX;
+- (CGFloat)maxY;
 
 - (instancetype)adjustOrigin:(CGPoint)origin;
 - (instancetype)adjustX:(CGFloat)x;
